@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enitha PS | Portfolio</title>
+    <style>
+        /* CSS Variables & Reset */
+        :root {
+            --primary: #00d2ff;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 10%;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
+        }
+
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); }
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero h1 { font-size: 4rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; color: var(--text-dim); max-width: 600px; }
+        .highlight { color: var(--primary); }
+
+        /* Sections */
+        section { padding: 100px 10%; }
+        h2 { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; }
+
+        /* Projects Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; }
+        .tag {
+            display: inline-block;
+            background: #0ea5e920;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 5px 5px 0 0;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skill-pill {
+            background: #334155;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px;
+            border-top: 1px solid #334155;
+            color: var(--text-dim);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ENITHA PS</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Hi, I'm <span class="highlight">Enitha PS</span></h1>
+        <p>B.Tech in Artificial Intelligence & Data Science. Dedicated to building efficient software solutions and data-driven applications.</p>
+        <div style="margin-top: 2rem;">
+            <a href="mailto:enithaps10@gmail.com" class="skill-pill" style="text-decoration: none; color: white; background: var(--primary);">Get In Touch</a>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2>Key Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Student Management System</h3>
+                <p>A CRUD-based system developed to manage student records efficiently[cite: 5, 32].</p>
+                <div class="tag">Python</div> <div class="tag">SQL</div> [cite: 35]
+            </div>
+            <div class="card">
+                <h3>E-Commerce Website</h3>
+                <p>Full-stack online shopping platform with real-time cart features and secure login[cite: 36, 39].</p>
+                <div class="tag">React.js</div> <div class="tag">Node.js</div> [cite: 41]
+            </div>
+            <div class="card">
+                <h3>Mobile Banking UI/UX</h3>
+                <p>Interactive Figma prototype focusing on streamlined transaction workflows[cite: 42, 44].</p>
+                <div class="tag">Figma</div> [cite: 46]
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background: #0a0f1d;">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <span class="skill-pill">C / C++ (Advanced)</span> [cite: 22]
+            <span class="skill-pill">Java & DSA (Intermediate)</span> [cite: 24]
+            <span class="skill-pill">Python</span> [cite: 24]
+            <span class="skill-pill">SQL</span> [cite: 34]
+            <span class="skill-pill">Data Structures</span> [cite: 30]
+            <span class="skill-pill">DBMS</span> [cite: 57]
+            <span class="skill-pill">Oracle Cloud</span> [cite: 54]
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul style="list-style: none; text-align: center; color: var(--text-dim);">
+            <li style="margin-bottom: 1rem;">🏆 100+ Problems Solved on Leetcode [cite: 51]</li>
+            <li style="margin-bottom: 1rem;">🥈 2nd Place in College Coding Competition [cite: 52]</li>
+            <li style="margin-bottom: 1rem;">🎓 Oracle Certified Foundations Associate [cite: 54]</li>
+            <li>🥈 Code With Curious Season 02 - Runner Up [cite: 54]</li>
+        </ul>
+    </section>
+
+    <footer id="contact">
+        <p>Email: enithaps10@gmail.com | Phone: +91 9025605358</p>
+        <p style="margin-top: 10px;">&copy; 2025 Enitha PS. Built for AI & Data Science Portfolio.</p>
+    </footer>
+
+</body>
+</html>
